@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ABR PRO Hacking Simulator</title>
+<style>
+    body {
+        background: black;
+        color: #00FF00;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 16px;
+        margin: 0;
+        padding: 10px;
+        overflow: hidden;
+    }
+    #console {
+        height: 98vh;
+        overflow-y: auto;
+        white-space: pre;
+    }
+    .fail {
+        color: red;
+    }
+</style>
+</head>
+<body>
+<div id="console"></div>
+<script>
+const consoleEl = document.getElementById("console");
+
+function printLine(line, delay) {
+    setTimeout(() => {
+        consoleEl.innerHTML += line + "\n";
+        consoleEl.scrollTop = consoleEl.scrollHeight;
+    }, delay);
+}
+
+let delay = 500;
+printLine("Authenticating... ", delay);
+delay += 800;
+printLine("AI > Welcome back noorabrar360, all systems online", delay);
+delay += 1000;
+printLine("Starting ABR PRO V7...", delay);
+delay += 1000;
+printLine("Loading modules...", delay);
+delay += 1000;
+printLine("Selecting target platform: Instagram", delay);
+delay += 1000;
+printLine("Username: dark_user", delay);
+delay += 1000;
+printLine("Initiating brute-force attack...", delay);
+delay += 1000;
+
+for(let i=1; i<=100; i++) {
+    delay += 100;
+    if (i > 70 && i < 80 && Math.random() > 0.5) {
+        printLine(`[${i}%] Hacking Failed... Retrying...`, delay);
+    } else {
+        printLine(`[${i}%] Cracking password...`, delay);
+    }
+}
+
+delay += 2000;
+printLine("Searching backup passwords...", delay);
+delay += 2000;
+printLine("Injecting payload...", delay);
+delay += 2000;
+printLine("Bypassing firewall...", delay);
+delay += 2000;
+printLine("Access Denied!", delay);
+delay += 1000;
+printLine("Hacking Failed.", delay);
+</script>
+</body>
+</html>
